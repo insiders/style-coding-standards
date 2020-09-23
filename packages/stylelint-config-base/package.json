@@ -14,5 +14,8 @@
         "insiders"
     ],
     "author": "Insiders",
-    "license": "MIT"
+    "license": "MIT",
+    "peerDependencies": {
+        "stylelint": "^13.7.1"
+    }
 }

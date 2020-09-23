@@ -4,6 +4,8 @@ module.exports = {
         "max-empty-lines": 2,
         "length-zero-no-unit": true,
         "string-quotes": "single",
+        "at-rule-no-vendor-prefix": true,
+        "font-family-name-quotes": "always-where-recommended",
         "font-family-no-duplicate-names": true,
         "rule-empty-line-before": [
             "always-multi-line",{
@@ -34,6 +36,7 @@ module.exports = {
         "color-hex-case": "lower",
         "color-hex-length": "long",
         "color-named": "never",
+        "comment-empty-line-before": "always",
         "number-no-trailing-zeros": true,
         "number-leading-zero": "always",
         "declaration-block-trailing-semicolon": "always",
@@ -45,6 +48,7 @@ module.exports = {
         "declaration-colon-newline-after": "always-multi-line",
         "declaration-colon-space-before": "never",
         "declaration-colon-space-after": "always-single-line",
+        "declaration-no-important": true,
         "selector-combinator-space-after": "always",
         "selector-list-comma-newline-after": "always",
         "selector-pseudo-element-colon-notation": "double",
@@ -55,6 +59,14 @@ module.exports = {
         "selector-attribute-brackets-space-inside": "never",
         "selector-pseudo-class-case": "lower",
         "selector-type-case": "lower",
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                "ignorePseudoClasses": [
+                    "global"
+                ]
+            }
+        ],
         "media-feature-colon-space-before": "never",
         "media-feature-colon-space-after": "always",
         "value-keyword-case": "lower",
