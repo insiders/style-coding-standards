@@ -1,0 +1,21 @@
+{
+    "name": "@insiders/stylelint-config-base",
+    "version": "1.0.0",
+    "description": "Base CSS Stylelint configuration for Insiders projects",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/insiders/style-coding-standards.git",
+        "directory": "packages/stylelint-config-base"
+    },
+    "keywords": [
+        "stylelint",
+        "stylelintconfig",
+        "insiders"
+    ],
+    "author": "Insiders",
+    "license": "MIT",
+    "peerDependencies": {
+        "stylelint": "^13.7.1"
+    }
+}
