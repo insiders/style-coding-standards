@@ -1,11 +1,5 @@
 # style-coding-standards
 
-## Installation
+Check the readme in the packages for specific installation instructions:
 
-```bash
-npm install --save-dev @insiders/stylelint-config-base
-```
-
-## Setup
-
-Extend `@insiders/stylelint-config-base` in your projects `.stylelintrc` config file.
+* [stylelint-config-base](packages/stylelint-config-base/README.md)
