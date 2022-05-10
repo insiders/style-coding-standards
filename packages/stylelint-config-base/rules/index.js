@@ -60,7 +60,14 @@ module.exports = {
         "selector-type-case": "lower",
         "media-feature-colon-space-before": "never",
         "media-feature-colon-space-after": "always",
-        "value-keyword-case": "lower",
+        "value-keyword-case": [
+            "lower",
+            {
+                "ignoreKeywords": [
+                    "currentColor"
+                ]
+            }
+        ],
         "value-list-comma-space-after": "always-single-line",
         "value-list-comma-space-before": "never-single-line",
         "value-list-max-empty-lines":  1,
