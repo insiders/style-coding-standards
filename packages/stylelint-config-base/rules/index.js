@@ -20,7 +20,7 @@ module.exports = {
         "no-empty-source": true,
         "property-no-unknown": true,
         "rule-empty-line-before": [
-            "always-multi-line",{
+            "always-multi-line", {
                 "ignore": ["after-comment", "first-nested"]
             }
         ],
@@ -38,7 +38,7 @@ module.exports = {
         ],
         "stylistic/block-closing-brace-empty-line-before": "never",
         "stylistic/block-closing-brace-newline-after": [
-            "always",{
+            "always", {
                 "ignoreAtRules": ["if", "else"]
             }
         ],
@@ -73,58 +73,71 @@ module.exports = {
         "stylistic/unit-case": "lower",
         "stylistic/value-list-comma-space-after": "always-single-line",
         "stylistic/value-list-comma-space-before": "never-single-line",
-        "stylistic/value-list-max-empty-lines":  1,
+        "stylistic/value-list-max-empty-lines": 1,
+        "order/order": [
+            "custom-properties",
+            "declarations",
+        ],
         "order/properties-order": [
+            {
+                "groupName": "content",
+                "order": "flexible",
+                "properties": [
+                    "content"
+                ]
+            },
             {
                 "groupName": "position",
                 "order": "flexible",
                 "properties": [
-                    "content",
-                    "position",
+                    "clear",
                     "display",
                     "float",
-                    "clear"
+                    "position"
                 ]
             },
             {
                 "groupName": "grid-flex",
                 "order": "flexible",
                 "properties": [
+                    "align-content",
+                    "align-items",
+                    "align-self",
+                    "column-gap",
+                    "flex",
+                    "flex-basis",
+                    "flex-direction",
+                    "flex-flow",
+                    "flex-grow",
+                    "flex-shrink",
+                    "flex-wrap",
+                    "gap",
                     "grid",
                     "grid-area",
+                    "grid-auto-rows",
+                    "grid-auto-columns",
+                    "grid-auto-flow",
+                    "grid-column",
+                    "grid-column-end",
+                    "grid-column-gap",
+                    "grid-column-start",
+                    "grid-gap",
+                    "grid-row",
+                    "grid-row-end",
+                    "grid-row-gap",
+                    "grid-row-start",
                     "grid-template",
                     "grid-template-areas",
                     "grid-template-rows",
                     "grid-template-columns",
-                    "grid-row",
-                    "grid-row-start",
-                    "grid-row-end",
-                    "grid-column",
-                    "grid-column-start",
-                    "grid-column-end",
-                    "grid-auto-rows",
-                    "grid-auto-columns",
-                    "grid-auto-flow",
-                    "grid-gap",
-                    "grid-row-gap",
-                    "grid-column-gap",
-                    "flex",
-                    "flex-grow",
-                    "flex-shrink",
-                    "flex-basis",
-                    "flex-direction",
-                    "flex-flow",
-                    "flex-wrap",
-                    "align-content",
-                    "align-items",
-                    "align-self",
                     "justify-content",
                     "justify-items",
                     "justify-self",
-                    "gap",
-                    "row-gap",
-                    "column-gap",
-                    "order"
+                    "order",
+                    "place-content",
+                    "place-items",
+                    "place-self",
+                    "row-gap"
                 ]
             },
             {
@@ -132,26 +145,32 @@ module.exports = {
                 "order": "flexible",
                 "properties": [
                     "columns",
-                    "column-span",
-                    "column-width",
                     "column-count",
                     "column-fill",
                     "column-gap",
                     "column-rule",
-                    "column-rule-width",
+                    "column-rule-color",
                     "column-rule-style",
-                    "column-rule-color"
+                    "column-rule-width",
+                    "column-span",
+                    "column-width"
                 ]
             },
             {
                 "groupName": "inset-position",
                 "order": "flexible",
                 "properties": [
-                    "top",
-                    "right",
                     "bottom",
+                    "inset",
+                    "inset-block",
+                    "inset-block-end",
+                    "inset-block-start",
+                    "inset-inline",
+                    "inset-inline-end",
+                    "inset-inline-start",
                     "left",
-                    "inset"
+                    "right",
+                    "top"
                 ]
             },
             {
@@ -167,7 +186,7 @@ module.exports = {
                 ]
             },
             {
-                "groupName": "margin-padding",
+                "groupName": "margin",
                 "order": "flexible",
                 "properties": [
                     "margin",
@@ -175,11 +194,29 @@ module.exports = {
                     "margin-right",
                     "margin-bottom",
                     "margin-left",
+                    "margin-block",
+                    "margin-block-end",
+                    "margin-block-start",
+                    "margin-inline",
+                    "margin-inline-end",
+                    "margin-inline-start",
+                ]
+            },
+            {
+                "groupName": "padding",
+                "order": "flexible",
+                "properties": [
                     "padding",
                     "padding-top",
                     "padding-right",
                     "padding-bottom",
-                    "padding-left"
+                    "padding-left",
+                    "padding-block",
+                    "padding-block-end",
+                    "padding-block-start",
+                    "padding-inline",
+                    "padding-inline-end",
+                    "padding-inline-start",
                 ]
             },
             {
@@ -201,51 +238,89 @@ module.exports = {
                 ]
             },
             {
+                "groupName": "color-effect",
+                "order": "flexible",
+                "properties": [
+                    "box-shadow",
+                    "filter",
+                    "mix-blend-mode",
+                    "opacity",
+                ]
+            },
+            {
                 "groupName": "border",
                 "order": "flexible",
                 "properties": [
                     "border",
-                    "border-spacing",
-                    "border-collapse",
-                    "border-width",
-                    "border-style",
-                    "border-color",
-                    "border-top",
-                    "border-top-width",
-                    "border-top-style",
-                    "border-top-color",
-                    "border-right",
-                    "border-right-width",
-                    "border-right-style",
-                    "border-right-color",
+                    "border-block",
+                    "border-block-color",
+                    "border-block-end",
+                    "border-block-end-color",
+                    "border-block-end-style",
+                    "border-block-end-width",
+                    "border-block-start",
+                    "border-block-start-color",
+                    "border-block-start-style",
+                    "border-block-start-width",
+                    "border-block-style",
+                    "border-block-width",
                     "border-bottom",
                     "border-bottom-width",
                     "border-bottom-style",
                     "border-bottom-color",
+                    "border-bottom-right-radius",
+                    "border-bottom-right-image",
+                    "border-bottom-left-radius",
+                    "border-bottom-left-image",
+                    "border-bottom-image",
+                    "border-collapse",
+                    "border-color",
+                    "border-corner-image",
+                    "border-end-end-radius",
+                    "border-end-start-radius",
+                    "border-inline",
+                    "border-inline-color",
+                    "border-inline-end",
+                    "border-inline-end-color",
+                    "border-inline-end-style",
+                    "border-inline-end-width",
+                    "border-inline-start",
+                    "border-inline-start-color",
+                    "border-inline-start-style",
+                    "border-inline-start-width",
+                    "border-inline-style",
+                    "border-inline-width",
+                    "border-image",
+                    "border-image-outset",
+                    "border-image-repeat",
+                    "border-image-slice",
+                    "border-image-source",
+                    "border-image-width",
                     "border-left",
                     "border-left-width",
                     "border-left-style",
                     "border-left-color",
-                    "border-radius",
-                    "border-top-left-radius",
-                    "border-top-right-radius",
-                    "border-bottom-right-radius",
-                    "border-bottom-left-radius",
-                    "border-image",
-                    "border-image-source",
-                    "border-image-slice",
-                    "border-image-width",
-                    "border-image-outset",
-                    "border-image-repeat",
-                    "border-top-image",
-                    "border-right-image",
-                    "border-bottom-image",
                     "border-left-image",
-                    "border-corner-image",
+                    "border-radius",
+                    "border-right",
+                    "border-right-width",
+                    "border-right-style",
+                    "border-right-color",
+                    "border-right-image",
+                    "border-spacing",
+                    "border-start-end-radius",
+                    "border-start-start-radius",
+                    "border-style",
+                    "border-top",
+                    "border-top-image",
+                    "border-top-color",
+                    "border-top-left-radius",
                     "border-top-left-image",
+                    "border-top-right-radius",
                     "border-top-right-image",
-                    "border-bottom-right-image",
-                    "border-bottom-left-image"
+                    "border-top-style",
+                    "border-top-width",
+                    "border-width",
                 ]
             },
             {
@@ -260,6 +335,12 @@ module.exports = {
                     "font-stretch",
                     "font-size",
                     "font-family",
+                ]
+            },
+            {
+                "groupName": "text",
+                "order": "flexible",
+                "properties": [
                     "line-height",
                     "letter-spacing",
                     "text-align",
@@ -288,25 +369,66 @@ module.exports = {
                 ]
             },
             {
-                "groupName": "animation",
+                "groupName": "object",
+                "order": "flexible",
+                "properties": [
+                    "object-fit",
+                    "object-position"
+                ]
+            },
+            {
+                "groupName": "transform",
+                "order": "flexible",
+                "properties": [
+                    "rotate",
+                    "scale",
+                    "transform",
+                    "transform-origin",
+                    "translate"
+                ]
+            },
+            {
+                "groupName": "perspective",
+                "order": "flexible",
+                "properties": [
+                    "perspective",
+                    "perspective-origin"
+                ]
+            },
+            {
+                "groupName": "transition",
                 "order": "flexible",
                 "properties": [
                     "transition",
                     "transition-delay",
-                    "transition-timing-function",
                     "transition-duration",
                     "transition-property",
-                    "transform",
-                    "transform-origin",
+                    "transition-timing-function"
+                ]
+            },
+            {
+                "groupName": "animation",
+                "order": "flexible",
+                "properties": [
                     "animation",
-                    "animation-name",
-                    "animation-duration",
-                    "animation-play-state",
-                    "animation-timing-function",
                     "animation-delay",
-                    "animation-iteration-count",
                     "animation-direction",
-                    "animation-fill-mode"
+                    "animation-duration",
+                    "animation-fill-mode",
+                    "animation-iteration-count",
+                    "animation-name",
+                    "animation-play-state",
+                    "animation-timing-function"
+                ]
+            },
+            {
+                "groupName": "mouse",
+                "order": "flexible",
+                "properties": [
+                    "cursor",
+                    "pointer-events",
+                    "touch-action",
+                    "user-select"
                 ]
             },
             {
@@ -319,6 +441,13 @@ module.exports = {
                     "page-break-before",
                     "page-break-inside",
                     "page-break-after"
+                ]
+            },
+            {
+                "groupName": "zindex",
+                "order": "flexible",
+                "properties": [
+                    "z-index"
                 ]
             }
         ]
