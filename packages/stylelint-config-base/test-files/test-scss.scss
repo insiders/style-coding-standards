@@ -1,0 +1,26 @@
+
+.test{
+    @include test;
+    --test: 2px;
+    z-index: 2;
+    font-size: 10px;
+    margin: 0px;
+    display: flex ;
+}
+
+.class {
+    &-union {
+        //↑
+        // This type usage of `&`
+    }
+}
+
+.class {
+    &.foo {}
+}
+
+.foo {
+    .bar {}
+}
+
+.foo .bar {}
