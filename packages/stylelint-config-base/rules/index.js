@@ -1,7 +1,8 @@
 module.exports = {
     "plugins": [
+        "@stylistic/stylelint-plugin",
         "stylelint-order",
-        "stylelint-stylistic"
+        "stylelint-scss"
     ],
     "rules": {
         "block-no-empty": true,
@@ -36,47 +37,66 @@ module.exports = {
                 ]
             }
         ],
-        "stylistic/block-closing-brace-empty-line-before": "never",
-        "stylistic/block-closing-brace-newline-after": [
+        "@stylistic/block-closing-brace-empty-line-before": "never",
+        "@stylistic/block-closing-brace-newline-after": [
             "always", {
                 "ignoreAtRules": ["if", "else"]
             }
         ],
-        "stylistic/block-opening-brace-newline-after": "always",
-        "stylistic/block-opening-brace-space-before": "always",
-        "stylistic/color-hex-case": "lower",
-        "stylistic/declaration-block-semicolon-space-before": "never",
-        "stylistic/declaration-block-trailing-semicolon": "always",
-        "stylistic/declaration-bang-space-after": "never",
-        "stylistic/declaration-bang-space-before": "always",
-        "stylistic/declaration-colon-newline-after": "always-multi-line",
-        "stylistic/declaration-colon-space-after": "always-single-line",
-        "stylistic/declaration-colon-space-before": "never",
-        "stylistic/function-max-empty-lines": 1,
-        "stylistic/indentation": 4,
-        "stylistic/max-empty-lines": 2,
-        "stylistic/media-feature-colon-space-after": "always",
-        "stylistic/media-feature-colon-space-before": "never",
-        "stylistic/no-empty-first-line": true,
-        "stylistic/no-extra-semicolons": true,
-        "stylistic/number-leading-zero": "always",
-        "stylistic/number-no-trailing-zeros": true,
-        "stylistic/property-case": "lower",
-        "stylistic/string-quotes": "single",
-        "stylistic/selector-attribute-operator-space-before": "never",
-        "stylistic/selector-attribute-operator-space-after": "never",
-        "stylistic/selector-attribute-brackets-space-inside": "never",
-        "stylistic/selector-combinator-space-after": "always",
-        "stylistic/selector-list-comma-newline-after": "always",
-        "stylistic/selector-pseudo-class-case": "lower",
-        "stylistic/selector-pseudo-class-parentheses-space-inside": "never",
-        "stylistic/unit-case": "lower",
-        "stylistic/value-list-comma-space-after": "always-single-line",
-        "stylistic/value-list-comma-space-before": "never-single-line",
-        "stylistic/value-list-max-empty-lines": 1,
+        "@stylistic/block-opening-brace-newline-after": "always",
+        "@stylistic/block-opening-brace-space-before": "always",
+        "@stylistic/color-hex-case": "lower",
+        "@stylistic/declaration-block-semicolon-space-before": "never",
+        "@stylistic/declaration-block-trailing-semicolon": "always",
+        "@stylistic/declaration-bang-space-after": "never",
+        "@stylistic/declaration-bang-space-before": "always",
+        "@stylistic/declaration-colon-newline-after": "always-multi-line",
+        "@stylistic/declaration-colon-space-after": "always-single-line",
+        "@stylistic/declaration-colon-space-before": "never",
+        "@stylistic/function-max-empty-lines": 1,
+        "@stylistic/indentation": 4,
+        "@stylistic/max-empty-lines": 2,
+        "@stylistic/media-feature-colon-space-after": "always",
+        "@stylistic/media-feature-colon-space-before": "never",
+        "@stylistic/no-empty-first-line": true,
+        "@stylistic/no-extra-semicolons": true,
+        "@stylistic/number-leading-zero": "always",
+        "@stylistic/number-no-trailing-zeros": true,
+        "@stylistic/property-case": "lower",
+        "@stylistic/string-quotes": "single",
+        "@stylistic/selector-attribute-operator-space-before": "never",
+        "@stylistic/selector-attribute-operator-space-after": "never",
+        "@stylistic/selector-attribute-brackets-space-inside": "never",
+        "@stylistic/selector-combinator-space-after": "always",
+        "@stylistic/selector-list-comma-newline-after": "always",
+        "@stylistic/selector-pseudo-class-case": "lower",
+        "@stylistic/selector-pseudo-class-parentheses-space-inside": "never",
+        "@stylistic/unit-case": "lower",
+        "@stylistic/value-list-comma-space-after": "always-single-line",
+        "@stylistic/value-list-comma-space-before": "never-single-line",
+        "@stylistic/value-list-max-empty-lines": 1,
+        "scss/block-no-redundant-nesting": true,
+        "scss/at-each-key-value-single-line": true,
+        "scss/at-else-empty-line-before": "never",
+        "scss/at-else-if-parentheses-space-before": "always",
+        "scss/at-function-parentheses-space-before": "never",
+        "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
+        "scss/at-if-no-null": true,
+        "scss/at-mixin-argumentless-call-parentheses": "never",
+        "scss/at-mixin-parentheses-space-before": "never",
+        "scss/at-use-no-unnamespaced": true,
+        "scss/at-use-no-redundant-alias": true,
+        "scss/comment-no-empty": true,
+        "scss/dollar-variable-colon-space-after": "always",
+        "scss/dollar-variable-colon-space-before": "never",
+        "scss/declaration-nested-properties": "never",
+        "scss/operator-no-newline-after": true,
+        "scss/operator-no-unspaced": true,
+        "scss/selector-no-union-class-name": true,
+        "scss/no-duplicate-mixins": true,
         "order/order": [
             "custom-properties",
-            "declarations",
+            "declarations"
         ],
         "order/properties-order": [
             {
@@ -199,7 +219,7 @@ module.exports = {
                     "margin-block-start",
                     "margin-inline",
                     "margin-inline-end",
-                    "margin-inline-start",
+                    "margin-inline-start"
                 ]
             },
             {
@@ -216,7 +236,7 @@ module.exports = {
                     "padding-block-start",
                     "padding-inline",
                     "padding-inline-end",
-                    "padding-inline-start",
+                    "padding-inline-start"
                 ]
             },
             {
@@ -244,7 +264,7 @@ module.exports = {
                     "box-shadow",
                     "filter",
                     "mix-blend-mode",
-                    "opacity",
+                    "opacity"
                 ]
             },
             {
@@ -320,7 +340,7 @@ module.exports = {
                     "border-top-right-image",
                     "border-top-style",
                     "border-top-width",
-                    "border-width",
+                    "border-width"
                 ]
             },
             {
@@ -334,7 +354,7 @@ module.exports = {
                     "font-size-adjust",
                     "font-stretch",
                     "font-size",
-                    "font-family",
+                    "font-family"
                 ]
             },
             {

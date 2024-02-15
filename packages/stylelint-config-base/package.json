@@ -1,6 +1,6 @@
 {
     "name": "@insiders/stylelint-config-base",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "description": "Base CSS Stylelint configuration for Insiders projects",
     "main": "index.js",
     "repository": {
@@ -13,12 +13,17 @@
         "stylelintconfig",
         "insiders"
     ],
+    "scripts": {
+        "lint:css": "stylelint \"./test-files/*.css\"",
+        "lint:scss": "stylelint \"./test-files/*.scss\" --custom-syntax postcss-scss"
+    },
     "author": "Insiders",
     "license": "MIT",
     "peerDependencies": {
-        "stylelint": "~15.11.0",
+        "@stylistic/stylelint-plugin": "2.0.0",
+        "postcss-scss": "~4.0.9",
+        "stylelint": "~16.2.1",
         "stylelint-order": "~6.0.4",
-        "stylelint-stylistic": "~0.4.3",
-        "postcss-scss": "~4.0.9"
+        "stylelint-scss": "~6.1.0"
     }
 }
