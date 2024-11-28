@@ -1,6 +1,6 @@
 {
     "name": "@insiders/stylelint-config-base",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "description": "Base CSS Stylelint configuration for Insiders projects",
     "main": "index.js",
     "repository": {
@@ -20,10 +20,10 @@
     "author": "Insiders",
     "license": "MIT",
     "peerDependencies": {
-        "@stylistic/stylelint-plugin": "2.0.0",
+        "@stylistic/stylelint-plugin": "3.1.1",
         "postcss-scss": "~4.0.9",
-        "stylelint": "~16.2.1",
+        "stylelint": "~16.10.0",
         "stylelint-order": "~6.0.4",
-        "stylelint-scss": "~6.1.0"
+        "stylelint-scss": "~6.10.0"
     }
 }
